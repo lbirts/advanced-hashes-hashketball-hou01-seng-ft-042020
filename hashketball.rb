@@ -179,23 +179,23 @@ def big_shoe_rebounds
   rebounds
 end 
 
-# def most_points_scored
-#   most_player = ""
-#   most_points = 0
-#   game_hash.map {|team, team_data|
-#     team_data.map {|players, players_data|
-#       if players == :players 
-#         players_data.map {|player_stats|
-#           if most_points < player_stats[:points]
-#             most_points = player_stats[:points]
-#             most_player = player_stats[:player_name]
-#           end 
-#         }
-#       end
-#     }
-#   }
-#   most_player
-# end 
+def most_points_scored
+  most_player = ""
+  most_points = 0
+  game_hash.map {|team, team_data|
+    team_data.map {|players, players_data|
+      if players == :players 
+        players_data.map {|player_stats|
+          if most_points < player_stats[:points]
+            most_points = player_stats[:points]
+            most_player = player_stats[:player_name]
+          end 
+        }
+      end
+    }
+  }
+  most_player
+end 
 
 
 
