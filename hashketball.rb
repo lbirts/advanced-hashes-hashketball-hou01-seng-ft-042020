@@ -183,6 +183,7 @@ def most_points_scored
   most_player = ""
   most_points = 0
   game_hash.map {|team, team_data|
+    
     team_data.map {|players, players_data|
       if players == :players 
         players_data.map {|player_stats|
