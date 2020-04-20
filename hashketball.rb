@@ -201,8 +201,8 @@ def most_points_scored
       if team == :away
         team_data[:players].each do |player|
           player.map do |player_data|
-            binding.pry
-            hornets_points += player[:points]
+            # binding.pry
+            # hornets_points += player[:points]
           end
         end
       # elsif team == :home
