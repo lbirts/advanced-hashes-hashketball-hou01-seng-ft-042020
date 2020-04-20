@@ -203,9 +203,16 @@ def most_points_scored
             hornets_points += player[:points]
           end
         end
+      elsif team == :home
+        team_data[:players].map do |player|
+          player.map do |player_data|
+            nets_points += player[:points]
+          end
+        end
+      end
     end
   end
-    hornets_points
+    nets_points
 end
 
 
