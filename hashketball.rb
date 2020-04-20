@@ -186,7 +186,7 @@ def most_points_scored
     team_data[:players].map do |player|
       if player[:points] >= most_points
         most_points = player[:points]
-        most_player = player
+        most_player = player[:player_name]
       end
     end
   }
