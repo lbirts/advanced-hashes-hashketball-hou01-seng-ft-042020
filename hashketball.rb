@@ -189,6 +189,7 @@ def most_points_scored
         most_player = player
       end
     end
+  }
     most_player
   end
   
