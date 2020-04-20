@@ -193,6 +193,18 @@ def most_points_scored
     most_player
   end
   
+  def winning_team
+    nets_points = 0
+    hornets_points = 0
+    game_hash.map do |team, team_data|
+      if team = :away
+        team_data[:players].map do |player|
+          player.map do |player_data|
+            hornets_points += player[:points]
+          end
+        end
+    end
+end
 
 
 
