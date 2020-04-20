@@ -1,3 +1,4 @@
+require 'pry'
 # Write your code here!
 def game_hash
   hashketball = {
@@ -200,6 +201,7 @@ def most_points_scored
       if team == :away
         team_data[:players].map do |player|
           player.map do |player_data|
+            binding.pry
             hornets_points += player_data[:points]
           end
         end
