@@ -199,10 +199,10 @@ def most_points_scored
     hornets_points = 0
     game_hash.map do |team, team_data|
       if team == :away
-        team_data[:players].map do |player|
+        team_data[:players].each do |player|
           player.map do |player_data|
             binding.pry
-            hornets_points += player_data[:points]
+            hornets_points += player[:points]
           end
         end
       # elsif team == :home
