@@ -183,7 +183,29 @@ def most_points_scored
   most_player = ""
   most_points = 0
   game_hash.map {|team, team_data|
+    team_data[:players].map do |player|
+      if player[:points] >= most_points
+        most_points = player[:points]
+        most_player = player
+      end
+    end
+  end
+  most_player
+end
     
+    shoe = 0
+rebounds = 0 
+
+game_hash.map do |place, team_info|
+team_info[:players].map do |player|
+if player[:shoe] >= shoe
+shoe = player[:shoe]
+rebounds = player[:rebounds]
+end
+end
+end
+rebounds
+end 
     team_data.map {|players, players_data|
       if players == :players 
         players_data.map {|player_stats|
